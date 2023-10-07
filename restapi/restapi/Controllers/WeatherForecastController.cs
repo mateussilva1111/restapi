@@ -8,7 +8,7 @@ using Microsoft.Extensions.Logging;
 namespace restapi.Controllers
 {
     [ApiController]
-    [Route("[controller]")]
+    [Route("api/teste")]
     public class WeatherForecastController : ControllerBase
     {
         private static readonly string[] Summaries = new[]

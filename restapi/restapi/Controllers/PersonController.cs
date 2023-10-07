@@ -6,7 +6,7 @@ using restapi.Services.Interfaces;
 namespace restapi.Controllers
 {
     [ApiController]
-    [Route("[person]")]
+    [Route("api/person")]
     public class PersonController : ControllerBase
     {
         private readonly ILogger<PersonController> _logger;
@@ -18,7 +18,7 @@ namespace restapi.Controllers
             _personService = personService;
         }
 
-        [HttpGet("FindById/{id}")]
+        [HttpGet("FindById{id}")]
         public ActionResult FindById(long id)
         {
             var person = _personService.FindById(id);
@@ -36,7 +36,7 @@ namespace restapi.Controllers
         public ActionResult Delete(long id)
         {
             _personService.Delete(id);
-            return Ok();            
+            return Ok();
         }
 
         [HttpPost]
